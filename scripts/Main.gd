@@ -9,3 +9,4 @@ func _ready():
 	$Yieldot.show()
 	$Yieldot.set_speaker("Bernovel")
 	$Yieldot.set_text("Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!")
+	$Yieldot.add_sprite("res://images/character/Confident.png", Vector2(650, 400), Vector2(0.75, 0.75))

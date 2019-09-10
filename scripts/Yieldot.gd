@@ -16,17 +16,22 @@ onready var RichText = $Textbox/RichTextLabel
 func _ready():
 	hide()
 
-# Background
+# Background Controller
 func set_background(texture):
 	$Background.set_texture(texture)
 
-# Textbox
+# Sprite Controller
+func add_sprite(texture, position, scale = Vector2(1, 1)):
+	$Sprites.add_sprite(texture, position, scale)
+
+# Textbox Controlelr
 func set_text(text):
 	$Textbox/RichTextLabel.text = text
 
 func set_speaker(speaker):
 	$Textbox/NameTextLabel.text = speaker
 
+# Prompt
 func prompt(question, default = ""):
 	set_text(question)
 	
@@ -42,6 +47,7 @@ func prompt(question, default = ""):
 func get_prompt():
 	return $Textbox/TextEdit.text
 
+# Menu - choices
 func menu(question, choices):
 	buttons = []
 	var i = 0
@@ -71,6 +77,7 @@ func _on_menu_click(buttonID):
 func get_choice():
 	return choice
 
+# Event Listeners - on textbox clicked, prompt finished etc.
 func _input(event):
 	if not event.is_pressed():
 		return
