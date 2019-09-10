@@ -6,6 +6,10 @@ signal say_finish
 signal prompt_finish
 signal menu_finish
 
+# Character
+const Character = preload("res://scripts/Character.gd")
+
+# Textbox
 var buttons
 var choice
 
@@ -14,7 +18,16 @@ onready var NameTextLabel = $Textbox/NameTextLabel
 onready var RichText = $Textbox/RichTextLabel
 
 func _ready():
-	hide()
+	$Textbox.hide()
+
+# Character methods
+func create_character(name):
+	var Bernovel = Node2D.new()
+	Bernovel.script = Character
+	Bernovel.Yieldot = self
+	Bernovel.character_name = name
+	
+	return Bernovel
 
 # Background Controller
 func set_background(texture):

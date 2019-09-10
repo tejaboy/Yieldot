@@ -5,8 +5,12 @@ func _ready():
 	$Yieldot.NameTextLabel.rect_position = Vector2(100, 20)
 	$Yieldot.RichText.rect_position = Vector2(100, 60)
 	
+	# Create Character
+	var Bernovel = $Yieldot.create_character("Bernovel")
+	
 	# Initialize first message
-	$Yieldot.show()
-	$Yieldot.set_speaker("Bernovel")
-	$Yieldot.set_text("Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!")
-	$Yieldot.add_sprite("res://images/character/Confident.png", Vector2(650, 400), Vector2(0.75, 0.75))
+	Bernovel.says(["Hello World!", "This is an amazing game!"])
+	yield(Bernovel, "says_finish")
+	
+	# Hide Yieldot upon finish
+	$Yieldot/Textbox.hide()
