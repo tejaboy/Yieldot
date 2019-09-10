@@ -1,22 +1,13 @@
 extends Node2D
 
-var height = 200
-var width = 0
-
 func _ready():
-	on_window_size_changed()
+	resize()
+	
 	get_tree().get_root().connect("size_changed", self, "on_window_size_changed")
+	$NameTextLabel.connect("item_rect_changed", self, "on_label_rect_changed")
+	$RichTextLabel.connect("item_rect_changed", self, "on_label_rect_changed")
 
-func on_window_size_changed():
-	## Set size
-	var _width = width
-	
-	if width == 0:
-		_width = get_viewport().get_size().x
-	
-	$Background.rect_size = Vector2(_width, height)
-	
-	## Set position
+func resize():
 	# Get the starting center point.
 	var x = (get_viewport().get_size().x - $Background.rect_size.x) / 2
 	
@@ -27,4 +18,10 @@ func on_window_size_changed():
 	global_position = Vector2(x, y)
 	
 	## Labels
-	$RichTextLabel.rect_size = $Background.rect_size - Vector2(200, 0)
+	$RichTextLabel.rect_size = $Background.rect_size - Vector2($RichTextLabel.rect_position.x * 2, 0)
+
+func on_window_size_changed():
+	resize()
+
+func on_label_rect_changed():
+	resize()

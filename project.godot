@@ -19,6 +19,10 @@ config/name="Yieldot"
 run/main_scene="res://scenes/Yieldot.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/aspect="keep"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
