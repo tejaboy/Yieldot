@@ -9,13 +9,12 @@ signal menu_finish
 var buttons
 var choice
 
+# Shortcut for configuration
+onready var NameTextLabel = $Textbox/NameTextLabel
+onready var RichText = $Textbox/RichTextLabel
+
 func _ready():
 	hide()
-
-func show():
-	$Textbox.show()
-	
-	.show()
 
 # Background
 func set_background(texture):
