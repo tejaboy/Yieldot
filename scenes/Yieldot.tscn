@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
-[ext_resource path="res://scripts/Yieldot.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Yieldot/Yieldot.gd" type="Script" id=2]
 [ext_resource path="res://images/background/background.png" type="Texture" id=3]
-[ext_resource path="res://scripts/Background.gd" type="Script" id=4]
-[ext_resource path="res://scripts/Sprites.gd" type="Script" id=5]
-[ext_resource path="res://scripts/Textbox.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Yieldot/Background.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Yieldot/Sprites.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Yieldot/Textbox.gd" type="Script" id=6]
 [ext_resource path="res://images/ui/textbox_name.png" type="Texture" id=7]
 
 [node name="Main" type="Node2D"]

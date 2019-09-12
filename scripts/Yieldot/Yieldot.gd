@@ -7,7 +7,7 @@ signal prompt_finish
 signal menu_finish
 
 # Character
-const Character = preload("res://scripts/Character.gd")
+const Character = preload("res://scripts/Yieldot/Character.gd")
 
 # Textbox
 var buttons
