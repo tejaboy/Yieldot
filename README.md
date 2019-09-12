@@ -16,15 +16,15 @@ Godot Visual Novel Example
 ## Usage
 
 ### Nodes Setup
-Root
-| Yieldot (Node2D)
-  | Background (TextureRect)
-  | Sprites (Node2D)
-  | Textbox (Node2D)
-    | Background (TextureRect)
-	| NameTextLabel (RichTextLabel)
-	| RichTextLabel (RichTextLabel)
-	| PromptEdit (TextEdit)
+Root  
+| Yieldot (Node2D)  
+  | Background (TextureRect)  
+  | Sprites (Node2D)  
+  | Textbox (Node2D)  
+    | Background (TextureRect)  
+	| NameTextLabel (RichTextLabel)  
+	| RichTextLabel (RichTextLabel)  
+	| PromptEdit (TextEdit)  
 
 ### Configure Visual Node position through GDScript
 
@@ -59,7 +59,7 @@ yield(MC, "says_finish")
 
 ### $Yieldot vs Character
 
-`$Yieldot` is the base class and provide low-level access to the visual element.
+`$Yieldot` is the base class and provide low-level access to the visual element.  
 `Character` provides higher level code for faster prototyping.
 
 ```gdscript
