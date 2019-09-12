@@ -1,6 +1,7 @@
 extends Node2D
 
 var character_name
+var current_sprite
 var Yieldot
 
 signal say_finish
@@ -25,3 +26,9 @@ func says(msgs):
 		yield(self, "say_finish")
 	
 	emit_signal("says_finish")
+
+func show_sprite(texture, position, scale = Vector2(1, 1)):
+	if current_sprite != null:
+		Yieldot.remove_sprite(current_sprite);
+	
+	current_sprite = Yieldot.add_sprite(texture, position, scale)

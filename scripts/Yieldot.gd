@@ -36,7 +36,10 @@ func set_background(texture):
 
 # Sprite Controller
 func add_sprite(texture, position, scale = Vector2(1, 1)):
-	$Sprites.add_sprite(texture, position, scale)
+	return $Sprites.add_sprite(texture, position, scale)
+
+func remove_sprite(node):
+	$Sprites.remove_child(node);
 
 # Textbox Controlelr
 func set_text(text):

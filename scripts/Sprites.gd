@@ -6,7 +6,10 @@ func _ready():
 func add_sprite(texture, position, scale):
 	var sprite = Sprite.new()
 	sprite.texture = load(texture)
+	sprite.centered = false
 	sprite.position = position
 	sprite.scale = scale
 	
 	add_child(sprite)
+	
+	return sprite

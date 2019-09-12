@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Confident.png-42d61d7327e7a58f9292797d69e291fd.stex"
+path="res://.import/Happy.png-02f79d3ad0fe086a4c66ae09af4e607d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/character/Confident.png"
-dest_files=[ "res://.import/Confident.png-42d61d7327e7a58f9292797d69e291fd.stex" ]
+source_file="res://images/character/Happy.png"
+dest_files=[ "res://.import/Happy.png-02f79d3ad0fe086a4c66ae09af4e607d.stex" ]
 
 [params]
 

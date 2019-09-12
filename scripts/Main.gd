@@ -16,7 +16,7 @@ func _ready():
 	
 	# Initialize first message
 	MC.says(["Hello World!", "This is an amazing game!"])
-	$Yieldot.add_sprite("res://images/character/Confident.png", Vector2(650, 400), Vector2(0.75, 0.75))
+	MC.show_sprite("res://images/character/Happy.png", Vector2(250, -200))
 	yield(MC, "says_finish")
 	
 	# Hide Yieldot upon finish
