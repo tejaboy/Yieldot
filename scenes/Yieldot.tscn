@@ -44,3 +44,7 @@ margin_left = 197.113
 margin_top = 251.932
 margin_right = 237.113
 margin_bottom = 291.932
+
+[node name="PromptEdit" type="TextEdit" parent="Yieldot/Textbox"]
+margin_right = 40.0
+margin_bottom = 40.0

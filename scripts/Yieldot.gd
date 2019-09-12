@@ -16,9 +16,10 @@ var choice
 # Shortcut for configuration
 onready var NameTextLabel = $Textbox/NameTextLabel
 onready var RichText = $Textbox/RichTextLabel
+onready var Prompt = $Textbox/PromptEdit
 
 func _ready():
-	$Textbox.hide()
+	pass
 
 # Character methods
 func create_character(name):
@@ -47,18 +48,17 @@ func set_speaker(speaker):
 # Prompt
 func prompt(question, default = ""):
 	set_text(question)
-	
-	$Textbox/TextEdit.text = default
-	$Textbox/TextEdit.show()
+	$Textbox/PromptEdit.text = default
+	$Textbox/PromptEdit.show()
 	
 	yield(self, "enter")
 	
-	$Textbox/TextEdit.hide()
+	$Textbox/PromptEdit.hide()
 	
 	emit_signal("prompt_finish")
 
 func get_prompt():
-	return $Textbox/TextEdit.text
+	return $Textbox/PromptEdit.text
 
 # Menu - choices
 func menu(question, choices):

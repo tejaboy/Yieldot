@@ -17,8 +17,9 @@ func resize():
 	# And ... finally set the position!
 	global_position = Vector2(x, y)
 	
-	## Labels
+	# Childs
 	$RichTextLabel.rect_size = $Background.rect_size - Vector2($RichTextLabel.rect_position.x * 2, 0)
+	$PromptEdit.rect_size.x = $Background.rect_size.x - ($RichTextLabel.rect_position.x * 2)
 
 func on_window_size_changed():
 	resize()
