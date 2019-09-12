@@ -16,6 +16,7 @@ Godot Visual Novel Example
 ## Usage
 
 ### Nodes Setup
+```
 Root  
 | Yieldot (Node2D)  
   | Background (TextureRect)  
@@ -25,6 +26,7 @@ Root
 	| NameTextLabel (RichTextLabel)  
 	| RichTextLabel (RichTextLabel)  
 	| PromptEdit (TextEdit)  
+```
 
 ### Configure Visual Node position through GDScript
 
